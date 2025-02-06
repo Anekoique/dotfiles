@@ -4,7 +4,7 @@ Combine the configuration of [Cascade Kobayashi](https://github.com/Isoheptane/d
 
 ```
 dotfiles
-    ├── alacritty     						// cofiguration for terminal
+    ├── alacritty                           // cofiguration for terminal
     │   ├── alacritty.toml
     │   ├── base16_default_dark.toml
     │   └── citylights.toml
@@ -37,6 +37,6 @@ dotfiles
 
 
 
-![image-20250206212213128](/home/ctoluu/.config/Typora/typora-user-images/image-20250206212213128.png)
+![image-20250206212213128](./images/README1.png)
 
-![image-20250206212328294](/home/ctoluu/.config/Typora/typora-user-images/image-20250206212328294.png)
+![image-20250206212328294](./images/README2.png)
