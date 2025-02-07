@@ -87,7 +87,7 @@ end, { desc = "Close current buffer" })
 
 -- toggleterm
 map("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<cr>", { desc = "ToggleTerm horizontal split" })
-map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "ToggleTerm float" })
+map("n", "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { desc = "ToggleTerm float" })
 map("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", { desc = "ToggleTerm float" })
 map("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", { desc = "ToggleTerm vertical split" })
 
@@ -141,7 +141,7 @@ unmap("n", "<leader>cd")
 unmap({ "n", "v" }, "<leader>cf")
 
 map("n", "<leader>lA", function()
-  vim.lsp.buf.code_action({
+  vim.lsp.buf.code_ac({
     context = {
       only = {
         "source",
@@ -261,3 +261,10 @@ map("n", "L", "$", opt)
 -- ctrl u / ctrl + d  只移动9行，默认移动半屏
 map("n", "<C-u>", "9k", opt)
 map("n", "<C-d>", "9j", opt)
+
+-- 上下移动选中文本
+map("v", "J", ":move '>+1<CR>gv-gv", opt)
+map("v", "K", ":move '<-2<CR>gv-gv", opt)
+
+map("t", "<Esc>", "<C-\\><C-n>", opt)
+

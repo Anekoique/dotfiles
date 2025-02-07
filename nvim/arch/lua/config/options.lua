@@ -20,7 +20,7 @@ opt.relativenumber = false
 if vim.fn.has("mac") == 1 then
   opt.guifont = { "CaskaydiaCove Nerd Font", "PingFang SC", ":h12" }
 else
-  opt.guifont = { "CaskaydiaCove Nerd Font", "Source Han Sans CN", ":h15" }
+  opt.guifont = { "CaskaydiaCove Nerd Font", "Source Han Sans CN", ":h17" }
 end
 opt.guicursor =
   "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait0-blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
