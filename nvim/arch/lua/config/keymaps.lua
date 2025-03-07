@@ -80,6 +80,13 @@ end, { desc = "Go to line above" })
 
 map("n", "]t", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "[t", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+map("n", "tt", ':tabnew<CR>', { desc = "new tab"})
+map('n', 't1', '1gt', { noremap = true, silent = true })
+map('n', 't2', '2gt', { noremap = true, silent = true })
+map('n', 't3', '3gt', { noremap = true, silent = true })
+map('n', 't4', '4gt', { noremap = true, silent = true })
+map('n', 't5', '5gt', { noremap = true, silent = true })
+map('n', 't6', '6gt', { noremap = true, silent = true })
 
 map("n", "<leader>v", function()
   require("mini.bufremove").delete(0, true)

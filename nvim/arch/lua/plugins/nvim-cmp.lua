@@ -73,14 +73,23 @@ return {
         -- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
         ["<Tab>"] = cmp.mapping(function(fallback)
           -- Hint: if the completion menu is visible select next one
+          -- if cmp.visible() then
+          --   cmp.select_next_item()
+          -- elseif luasnip.expand_or_locally_jumpable() then
+          --   -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+          --   -- they way you will only jump inside the snippet region
+          --   luasnip.expand_or_jump()
+          -- elseif has_words_before() then
+          --   cmp.complete()
+          -- else
+          --   fallback()
+          -- end
           if cmp.visible() then
             cmp.select_next_item()
+          elseif vim.snippet.active({ direction = 1 }) then
+            vim.snippet.jump(1)
           elseif luasnip.expand_or_locally_jumpable() then
-            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-            -- they way you will only jump inside the snippet region
             luasnip.expand_or_jump()
-          elseif has_words_before() then
-            cmp.complete()
           else
             fallback()
           end

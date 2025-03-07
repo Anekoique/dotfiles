@@ -21,6 +21,10 @@ return {
           { "<leader>cR", false },
         },
       },
+      bacon_ls = {
+        enabled = diagnostics == "bacon-ls",
+      },
+      rust_analyzer = { enabled = false },
     },
   },
 }
