@@ -2,41 +2,45 @@
 
 Combine the configuration of [Cascade Kobayashi](https://github.com/Isoheptane/dotfiles) and [fanlumaster](https://github.com/fanlumaster/lazyvim-archlinux) to make subtle adjustments
 
-```
+```shell
 dotfiles
-    ├── alacritty                           // cofiguration for terminal
+    ├── alacritty
     │   ├── alacritty.toml
     │   ├── base16_default_dark.toml
     │   └── citylights.toml
-    ├── fish                               // cofiguration for shell
+    ├── Code
+    │   ├── keybindings.json
+    │   └── settings.json
+    ├── Cursor
+    │   ├── keybindings.json
+    │   └── settings.json
+    ├── fish
     │   ├── conf.d
     │   ├── config.fish
     │   ├── fish_variables
     │   └── functions
-    ├── hyprland                           // cofiguration for desktop environment
+    ├── hyprland
     │   ├── hyprland.conf
-    │   └── hyprpaper.conf
-    ├── kitty                              // optional cofiguration for terminal
+    │   ├── hyprlock.conf
+    │   ├── hyprpaper.conf
+    │   └── switch_workspace.sh
+    ├── kitty
     │   ├── current-theme.conf
     │   └── kitty.conf
-    ├── nvim                               // cofiguration for editor
+    ├── nvim
     │   ├── arch
     │   └── ubuntu
     ├── README.md
-    ├── tofi                              // cofiguration for program launcher
+    ├── tofi
     │   └── config
-    ├── waybar                            // cofiguration for status bar
+    ├── waybar
     │   ├── config
     │   ├── config-upperbar
     │   └── style.css
-    └── xremap                            // cofiguration for keyboard
+    └── xremap
         ├── config.yml
         ├── start2.sh
         └── start.sh
 ```
 
-
-
-![image-20250206212213128](./images/README1.png)
-
-![image-20250206212328294](./images/README2.png)
+![image-20250206212328294](./images/README3.png)
