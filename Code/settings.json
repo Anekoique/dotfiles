@@ -1,9 +1,18 @@
 {
     "files.autoSave": "onFocusChange",
-    "window.menuBarVisibility": "toggle",
     "workbench.iconTheme": "catppuccin-mocha",
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN', '微软雅黑', Consolas, 'Courier New', monospace",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    }
+    },
+    "window.menuBarVisibility": "toggle",
+    "editor.titleBar.enabled": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.fullScreen": false,
+    "window.titleBarStyle": "native",
+    "editor.cursorBlinking": "solid",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "catppuccin.italicKeywords": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.activityBar.location": "hidden"
 }

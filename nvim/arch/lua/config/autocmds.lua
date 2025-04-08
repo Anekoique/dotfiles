@@ -42,6 +42,15 @@ if not vim.g.vscode then
     end,
   })
 
+  vim.api.nvim_create_autocmd("FileType", {
+    group = augroup("associate_filetype"),
+    pattern = { "asm" },
+    callback = function()
+      vim.opt.shiftwidth = 4
+      vim.opt.formatoptions:remove({ "o" }) -- 防止使用 o 切换到下一行的时候自动加上注释符号(在上一行是注释的情况下)
+    end,
+  })
+
   vim.api.nvim_create_autocmd("InsertLeave", {
     callback = function()
       if

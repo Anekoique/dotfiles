@@ -266,8 +266,8 @@ map("n", "H", "^", opt)
 map("n", "L", "$", opt)
 
 -- ctrl u / ctrl + d  只移动9行，默认移动半屏
-map("n", "<C-u>", "9k", opt)
-map("n", "<C-d>", "9j", opt)
+map("n", "<C-u>", "8k", opt)
+map("n", "<C-d>", "8j", opt)
 
 -- 上下移动选中文本
 map("v", "J", ":move '>+1<CR>gv-gv", opt)
