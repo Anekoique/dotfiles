@@ -153,7 +153,7 @@
         "when": "workbench.explorer.openEditorsView.active"
     },
     {
-        "key": "shift+meta+f",
+        "key": "ctrl+meta+f",
         "command": "workbench.action.addRootFolder",
         "when": "enterMultiRootWorkspaceSupport || workbenchState == 'workspace'"
     },
@@ -215,5 +215,30 @@
     {
         "key": "ctrl+i",
         "command": "-composer.startComposerPrompt"
-    }
+    },
+    {
+        "key": "meta+q",
+        "command": "composer.closeComposerTab",
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-composer.closeComposerTab",
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
+    },
+    {
+        "key": "q",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && focusedView == 'workbench.panel.output' && neovim.mode != 'insert'"
+    },
+    {
+        "key": "meta+q",
+        "command": "aichat.close-sidebar",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
 ]

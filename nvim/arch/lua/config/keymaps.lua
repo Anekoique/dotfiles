@@ -258,7 +258,7 @@ map("i", "<C-l>", "<ESC>A", opt)
 -- oo
 map("n", "oo", "o<ESC>k", opt)
 
-map("n", "q", ":q<CR>", opt)
+map("n", "<C-q>", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
 
@@ -275,3 +275,4 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
 map("t", "<Esc>", "<C-\\><C-n>", opt)
 
+map("n", "<leader>w", ":Colorize<CR>", { noremap = true, silent = true })

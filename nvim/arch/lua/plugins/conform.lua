@@ -10,6 +10,8 @@ return {
       ["python"] = { "autopep8" },
       ["css"] = { "prettier" },
       ["html"] = { "html-lsp" },
+      -- Go language formatting
+      ["go"] = { "gofumpt", "goimports" },
     },
   },
 }

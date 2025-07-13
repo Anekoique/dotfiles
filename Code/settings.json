@@ -14,5 +14,11 @@
     "terminal.integrated.sendKeybindingsToShell": true,
     "catppuccin.italicKeywords": false,
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.activityBar.location": "hidden"
+    "makefile.configureOnOpen": true,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "never",
+    "digital-ide.welcome.show": false,
+    "digital-ide.prj.vivado.install.path": "~",
+    "digital-ide.function.lsp.linter.verilog.diagnostor": "verilator"
 }

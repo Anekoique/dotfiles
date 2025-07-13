@@ -6,7 +6,7 @@ vim.g.autoformat = false
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_floating_shadow = false
 vim.g.neovide_input_ime = true
-vim.g.neovide_cursor_vfx_particle_density = 100.0
+vim.g.neovide_cursor_vfx_particle_density = 50.0
 -- 输入的时候隐藏鼠标
 vim.g.neovide_hide_mouse_when_typing = true
 
@@ -25,8 +25,8 @@ end
 opt.guicursor =
   "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait0-blinkoff0-blinkon0-Cursor/lCursor,sm:block-blinkwait0-blinkoff0-blinkon0"
 opt.list = true
-opt.listchars = { space = "·" }
-opt.shell = "fish"
+opt.listchars = { space = "·", tab = ">-" }
+opt.shell = "bash"
 -- opt.shellcmdflag = "-command"
 -- opt.shellquote = '"'
 -- opt.shellxquote = ""

@@ -59,6 +59,12 @@
     "vscode-neovim.useCtrlKeysForNormalMode": false,
     "vscode-neovim.useCtrlKeysForInsertMode": false,
     "rust-analyzer.diagnostics.enable": false,
-    "window.zoomLevel": 2,
-    "workbench.activityBar.location": "hidden"
+    "digital-ide.welcome.show": false,
+    "digital-ide.function.lsp.linter.verilog.diagnostor": "verilator",
+    "git.autofetch": true,
+    "terminal.integrated.tabs.enabled": false,
+    "cursor.general.gitGraphIndexing": "enabled",
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.zoomLevel": 2
 }
