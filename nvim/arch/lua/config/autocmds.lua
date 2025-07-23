@@ -28,17 +28,23 @@ if not vim.g.vscode then
     group = augroup("associate_filetype"),
     pattern = { "python" },
     callback = function()
-      vim.opt.shiftwidth = 4
-      vim.opt.formatoptions:remove({ "o" }) -- 防止使用 o 切换到下一行的时候自动加上注释符号(在上一行是注释的情况下)
+      vim.opt_local.shiftwidth = 4
+      vim.opt_local.tabstop = 4
+      vim.opt_local.softtabstop = 4
+      vim.opt_local.expandtab = true
+      vim.opt_local.formatoptions:remove({ "o" }) -- 防止使用 o 切换到下一行的时候自动加上注释符号(在上一行是注释的情况下)
     end,
   })
 
-  vim.api.nvim_create_autocmd("FileType", {
-    group = augroup("associate_filetype"),
+  vim.api.nvim_create_autocmd({ "FileType", "BufEnter", "BufWinEnter" }, {
+    group = augroup("c_cpp_indent"),
     pattern = { "c", "cpp" },
     callback = function()
-      vim.opt.shiftwidth = 2
-      vim.opt.formatoptions:remove({ "o" }) -- 防止使用 o 切换到下一行的时候自动加上注释符号(在上一行是注释的情况下)
+      vim.opt_local.shiftwidth = 4
+      vim.opt_local.tabstop = 4
+      vim.opt_local.softtabstop = 4
+      vim.opt_local.expandtab = true
+      vim.opt_local.formatoptions:remove({ "o" }) -- 防止使用 o 切换到下一行的时候自动加上注释符号(在上一行是注释的情况下)
     end,
   })
 
