@@ -20,5 +20,6 @@
     "window.customTitleBarVisibility": "never",
     "digital-ide.welcome.show": false,
     "digital-ide.prj.vivado.install.path": "~",
-    "digital-ide.function.lsp.linter.verilog.diagnostor": "verilator"
+    "digital-ide.function.lsp.linter.verilog.diagnostor": "verilator",
+    "github.copilot.nextEditSuggestions.enabled": true
 }

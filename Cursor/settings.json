@@ -33,8 +33,7 @@
     "zenMode.hideStatusBar": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.fullScreen": false,
-    "window.commandCenter": true,
-    "window.menuBarVisibility": "visible",
+    "window.menuBarVisibility": "toggle",
     "editor.quickSuggestions": {
         "other": true,
         "comments": true,
@@ -66,5 +65,6 @@
     "cursor.general.gitGraphIndexing": "enabled",
     "cmake.showConfigureWithDebuggerNotification": false,
     "diffEditor.ignoreTrimWhitespace": false,
+    "cursor.general.disableHttp2": true,
     "window.zoomLevel": 2
 }

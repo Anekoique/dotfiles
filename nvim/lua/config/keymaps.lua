@@ -195,6 +195,9 @@ if vim.g.neovide then
   vim.keymap.set({ "n", "v" }, "<c-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
   vim.keymap.set({ "n", "v" }, "<c-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
   vim.keymap.set({ "n", "v" }, "<c-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
+  vim.keymap.set("n", "<C-S-v>", '"+p', { desc = "Paste from clipboard" })
+  vim.keymap.set("v", "<C-S-v>", '"+p', { desc = "Paste from clipboard" })
+  vim.keymap.set({ "i", "c" }, "<C-S-v>", "<C-r>+", { desc = "Paste from clipboard" })
 end
 
 function ClearTerm(reset)
@@ -242,6 +245,8 @@ map("n", "s=", "<C-w>=", opt)
 
 map("n", "<C-]>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
 map("n", "<C-[>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+map("n", "<C-Tab>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+map("n", "<C-S-Tab>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
 map("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>", { noremap = true, silent = true })
 map("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>", { noremap = true, silent = true })
 map("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>", { noremap = true, silent = true })
