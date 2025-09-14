@@ -1,0 +1,13 @@
+{
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN', '微软雅黑', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/gcc-15",
+    "editor.cursorBlinking": "solid",
+    "catppuccin.italicKeywords": false,
+}
