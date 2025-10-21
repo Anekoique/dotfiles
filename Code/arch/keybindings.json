@@ -1,60 +1,60 @@
-// place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "ctrl+w q",
-        "command": "workbench.action.closeactiveeditor",
-        "when": "!editortextfocus && !filesexplorerfocus && !searchviewletfocus && !terminalfocus && neovim.mode != 'cmdline'"
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus && neovim.mode != 'cmdline'"
     },
     {
         "key": "ctrl+w q",
-        "command": "-workbench.action.closeactiveeditor",
-        "when": "!editortextfocus && !filesexplorerfocus && !searchviewletfocus && !terminalfocus && neovim.mode != 'cmdline'"
+        "command": "-workbench.action.closeActiveEditor",
+        "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus && neovim.mode != 'cmdline'"
     },
     {
         "key": "ctrl+`",
-        "command": "workbench.action.showallsymbols"
+        "command": "workbench.action.showAllSymbols"
     },
     {
         "key": "ctrl+t",
-        "command": "-workbench.action.showallsymbols"
+        "command": "-workbench.action.showAllSymbols"
     },
     {
         "key": "ctrl+`",
-        "command": "workbench.action.terminal.toggleterminal",
+        "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
     {
         "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleterminal",
+        "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
     {
         "key": "ctrl+up",
-        "command": "workbench.action.terminal.focusnext",
-        "when": "terminalfocus && terminalhasbeencreated && !terminaleditorfocus || terminalfocus && terminalprocesssupported && !terminaleditorfocus"
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
         "key": "ctrl+pagedown",
-        "command": "-workbench.action.terminal.focusnext",
-        "when": "terminalfocus && terminalhasbeencreated && !terminaleditorfocus || terminalfocus && terminalprocesssupported && !terminaleditorfocus"
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
         "key": "ctrl+down",
         "command": "workbench.action.terminal.focus",
-        "when": "accessibilitymodeenabled && accessibleviewonlastline && terminalhasbeencreated && accessibleviewcurrentproviderid == 'terminal' || accessibilitymodeenabled && accessibleviewonlastline && terminalprocesssupported && accessibleviewcurrentproviderid == 'terminal'"
+        "when": "accessibilityModeEnabled && accessibleViewOnLastLine && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewOnLastLine && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
     },
     {
         "key": "ctrl+down",
         "command": "-workbench.action.terminal.focus",
-        "when": "accessibilitymodeenabled && accessibleviewonlastline && terminalhasbeencreated && accessibleviewcurrentproviderid == 'terminal' || accessibilitymodeenabled && accessibleviewonlastline && terminalprocesssupported && accessibleviewcurrentproviderid == 'terminal'"
+        "when": "accessibilityModeEnabled && accessibleViewOnLastLine && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewOnLastLine && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
     },
     {
         "key": "ctrl+alt+\\",
-        "command": "workbench.action.focusfirsteditorgroup"
+        "command": "workbench.action.focusFirstEditorGroup"
     },
     {
         "key": "ctrl+1",
-        "command": "-workbench.action.focusfirsteditorgroup"
+        "command": "-workbench.action.focusFirstEditorGroup"
     },
     {
         "key": "ctrl+alt+]",
@@ -62,130 +62,171 @@
     },
     {
         "key": "ctrl+u",
-        "command": "cursormove",
+        "command": "cursorMove",
         "args": {
             "to": "up",
             "by": "line",
             "value": 9
         },
-        "when": "editortextfocus"
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+d",
-        "command": "cursormove",
+        "command": "cursorMove",
         "args": {
             "to": "down",
             "by": "line",
             "value": 9
         },
-        "when": "editortextfocus"
+        "when": "editorTextFocus"
     },
-    // 配置 tab 键选择下一个补全项
+    // 配置 Tab 键选择下一个补全项
     {
         "key": "tab",
-        "command": "selectnextsuggestion",
-        "when": "suggestwidgetvisible"
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
     },
-    // 配置 enter 键确认补全
+    // 配置 Enter 键确认补全
     {
         "key": "enter",
-        "command": "acceptselectedsuggestion",
-        "when": "suggestwidgetvisible"
+        "command": "acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible"
     },
-    // 保留 tab 键的默认缩进功能（当没有补全建议时）
+    // 保留 Tab 键的默认缩进功能（当没有补全建议时）
     {
         "key": "tab",
         "command": "tab",
-        "when": "editortextfocus && !suggestwidgetvisible"
+        "when": "editorTextFocus && !suggestWidgetVisible"
     },
     {
       "key": "shift+tab",
-      "command": "selectprevsuggestion",
-      "when": "suggestwidgetvisible"
+      "command": "selectPrevSuggestion",
+      "when": "suggestWidgetVisible"
     },
     {
         "key": "ctrl+f",
-        "command": "editor.action.accessibleviewacceptinlinecompletion",
-        "when": "accessibleviewisshown && accessibleviewcurrentproviderid == 'inlinecompletions'"
+        "command": "editor.action.accessibleViewAcceptInlineCompletion",
+        "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
     },
     {
         "key": "ctrl+/",
-        "command": "-editor.action.accessibleviewacceptinlinecompletion",
-        "when": "accessibleviewisshown && accessibleviewcurrentproviderid == 'inlinecompletions'"
+        "command": "-editor.action.accessibleViewAcceptInlineCompletion",
+        "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
     },
     {
         "key": "ctrl+f",
-        "command": "github.copilot.acceptcursorpanelsolution",
-        "when": "github.copilot.activated && github.copilot.panelvisible && activewebviewpanelid == 'github copilot suggestions'"
+        "command": "github.copilot.acceptCursorPanelSolution",
+        "when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
     },
     {
         "key": "ctrl+/",
-        "command": "-github.copilot.acceptcursorpanelsolution",
-        "when": "github.copilot.activated && github.copilot.panelvisible && activewebviewpanelid == 'github copilot suggestions'"
+        "command": "-github.copilot.acceptCursorPanelSolution",
+        "when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
     },
     {
         "key": "ctrl+shift+enter",
         "command": "github.copilot.generate",
-        "when": "editortextfocus && github.copilot.activated && !commenteditorfocused && !ininteractiveinput && !interactiveeditorfocused"
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
     },
     {
         "key": "ctrl+enter",
         "command": "-github.copilot.generate",
-        "when": "editortextfocus && github.copilot.activated && !commenteditorfocused && !ininteractiveinput && !interactiveeditorfocused"
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
     },
     {
         "key": "ctrl+f",
-        "command": "editor.action.inlinesuggest.commit",
-        "when": "inlineeditisvisible && tabshouldacceptinlineedit && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible || inlinesuggestionhasindentationlessthantabsize && inlinesuggestionvisible && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible || inlineeditisvisible && inlinesuggestionhasindentationlessthantabsize && inlinesuggestionvisible && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible || inlineeditisvisible && inlinesuggestionvisible && tabshouldacceptinlineedit && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible"
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     },
     {
         "key": "tab",
-        "command": "-editor.action.inlinesuggest.commit",
-        "when": "inlineeditisvisible && tabshouldacceptinlineedit && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible || inlinesuggestionhasindentationlessthantabsize && inlinesuggestionvisible && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible || inlineeditisvisible && inlinesuggestionhasindentationlessthantabsize && inlinesuggestionvisible && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible || inlineeditisvisible && inlinesuggestionvisible && tabshouldacceptinlineedit && !editorhoverfocused && !editortabmovesfocus && !suggestwidgetvisible"
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     },
     {
         "key": "ctrl+alt+f",
         "command": "actions.find",
-        "when": "editorfocus || editorisopen"
+        "when": "editorFocus || editorIsOpen"
     },
     {
         "key": "ctrl+f",
         "command": "-actions.find",
-        "when": "editorfocus || editorisopen"
+        "when": "editorFocus || editorIsOpen"
     },
     {
         "key": "ctrl+alt+t",
         "command": "workbench.action.terminal.new",
-        "when": "terminalprocesssupported || terminalwebextensioncontributedprofile"
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
         "key": "ctrl+shift+`",
         "command": "-workbench.action.terminal.new",
-        "when": "terminalprocesssupported || terminalwebextensioncontributedprofile"
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
         "key": "meta+l",
         "command": "workbench.action.chat.open",
-        "when": "!chatsetuphidden"
+        "when": "!chatSetupHidden"
     },
     {
         "key": "ctrl+alt+i",
         "command": "-workbench.action.chat.open",
-        "when": "!chatsetuphidden"
+        "when": "!chatSetupHidden"
     },
-    // window control with meta+q - close secondary sidebar
+    // Window control with meta+q - close secondary sidebar
     {
         "key": "meta+q",
-        "command": "workbench.action.closeauxiliarybar"
+        "command": "workbench.action.closeAuxiliaryBar"
     },
     {
         "key": "ctrl+alt+b",
-        "command": "-workbench.action.closeauxiliarybar"
+        "command": "-workbench.action.closeAuxiliaryBar"
     },
-    // focus from chat to editor
+    // Focus from chat to editor
     {
         "key": "escape",
-        "command": "workbench.action.focusactiveeditorgroup",
-        "when": "auxiliarybarfocus"
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "auxiliaryBarFocus"
+    },
+    // Explorer Vim-like navigation with smaller steps
+    {
+        "key": "ctrl+d",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "list.focusDown",
+                "list.focusDown",
+                "list.focusDown",
+                "list.focusDown",
+                "list.focusDown"
+            ]
+        },
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "list.focusUp",
+                "list.focusUp",
+                "list.focusUp",
+                "list.focusUp",
+                "list.focusUp"
+            ]
+        },
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    // Return to editor from explorer with Esc
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    // Return to editor from explorer with Ctrl+L
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletFocus && !inputFocus"
     }
 ]
